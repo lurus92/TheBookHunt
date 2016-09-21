@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:elevation="4dp"
+    android:background="@color/colorPrimary"
+    android:transitionName="toolbar">
+
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/action_bar_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="My details"
+                    android:id="@+id/mainToolbarTitle"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"
+                    android:paddingTop="0dp"
+                    android:layout_marginBottom="6dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/toolbar_bottom"
+                android:layout_marginLeft="-10dp">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bookplaceholder"
+                    android:layout_margin="10dp"
+                    android:id="@+id/userToolbarImg"
+                    android:transitionName="mainToolbarImg"
+                    android:layout_gravity="left" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical|top"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="&lt;Utente>"
+                        android:layout_gravity="center_vertical"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/abc_text_size_medium_material"
+                        android:textIsSelectable="false"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                        android:id="@+id/mainToolbarBookUser" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 Books read"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/abc_action_bar_content_inset_material"
+                        android:textIsSelectable="false"
+                        android:id="@+id/userToolbarBookRead" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 Books shared"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/abc_action_bar_content_inset_material"
+                        android:textIsSelectable="false"
+                        android:id="@+id/userToolbarBookShared" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</android.support.v7.widget.Toolbar>

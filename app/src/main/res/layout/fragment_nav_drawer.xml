@@ -1,0 +1,80 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sampi.luigirusso.thebookhunt.NavDrawerFragment"
+    android:background="@android:color/white"
+    android:elevation="16dp">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|top">
+
+        <RelativeLayout
+            android:id="@+id/imgContainer"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@android:color/holo_blue_dark"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/userImgDrawer"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_account_circle_white_48dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="UserName"
+                android:id="@+id/usernameDrawer"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/userImgDrawer"
+                android:layout_toEndOf="@+id/userImgDrawer"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="detailUser"
+                android:id="@+id/userDetailsDrawer"
+                android:layout_below="@+id/usernameDrawer"
+                android:layout_toRightOf="@+id/userImgDrawer"
+                android:layout_toEndOf="@+id/userImgDrawer"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp" />
+        </RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_drawer"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/imgContainer"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/shareButtonDrawer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Share a Book"
+            android:background="@color/colorAccent"
+            android:elegantTextHeight="false"
+            android:translationZ="40dp"
+            android:textColor="@android:color/white"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="0dp"
+            android:elevation="40dp"
+            android:enabled="true"
+            android:height="40dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp" />
+    </LinearLayout>
+</FrameLayout>

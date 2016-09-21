@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_material_light">
+
+    <include
+        android:id="@+id/toolbarShare"
+        layout="@layout/toolbar_share">
+    </include>
+
+    <!--include layout="@layout/fragment_isbn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarShare"
+        android:layout_alignLeft="@+id/toolbarShare"
+        android:layout_alignStart="@+id/toolbarShare"></include-->
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/share_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarShare"
+        android:layout_alignLeft="@+id/toolbarShare"
+        android:layout_alignStart="@+id/toolbarShare" />
+
+    </RelativeLayout>
+
+    <FrameLayout android:id="@+id/left_drawer"
+        android:layout_width="304dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#111"/>
+</android.support.v4.widget.DrawerLayout>

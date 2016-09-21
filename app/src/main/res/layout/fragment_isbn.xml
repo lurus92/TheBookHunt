@@ -1,0 +1,76 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.ISBNFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/material_grey_300">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Take a photo of the ISBN of the book"
+            android:textColor="@color/colorAccent"
+            android:gravity="center" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabCamera"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:clickable="true"
+            android:padding="0dp"
+            android:background="@color/colorAccent"
+            android:cropToPadding="false"
+            android:src="@android:drawable/ic_menu_camera"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/colorAccent"
+            android:text="Or enter it manually"
+            android:gravity="bottom" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorAccent"
+            android:hint="Type the ISBN Code of your book here"
+            android:id="@+id/textISBN"
+            android:textAlignment="center"
+            android:textColor="@color/abc_primary_text_material_light" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorAccent"
+
+            android:text="NEXT"
+            android:id="@+id/nextButton"
+            android:layout_margin="20dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:text="WHAT IS AN ISBN?"
+            android:background="@null"
+            android:textColor="@color/colorAccent"
+            android:id="@+id/isbnButton" />
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

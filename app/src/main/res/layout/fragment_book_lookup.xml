@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dexafree.materialList.card.CardLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="20dp">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:id="@+id/cardView"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp"
+        android:layout_margin="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:paddingLeft="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Is this Your Book?"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"
+                    android:paddingTop="0dp"
+                    android:layout_marginBottom="6dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="-10dp">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/bookplaceholder"
+                    android:layout_margin="10dp"
+                    android:transitionName="mainToolbarImg"
+                    android:layout_gravity="left"
+                    android:id="@+id/thumb_container"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical|top"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Author"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/abc_action_bar_content_inset_material"
+                        android:textIsSelectable="false"
+                        android:id="@+id/requestedAuthor"
+                        android:textColor="@android:color/darker_gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Title"
+                        android:layout_gravity="center_vertical"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/abc_text_size_medium_material"
+                        android:textIsSelectable="false"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                        android:id="@+id/requestedTitle"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Year"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/abc_action_bar_content_inset_material"
+                        android:textIsSelectable="false"
+                        android:id="@+id/requestedYear"
+                        android:textColor="@android:color/darker_gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Description"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="12dp"
+                        android:textIsSelectable="false"
+                        android:id="@+id/requestedDescription"
+                        android:textColor="@android:color/darker_gray"
+                        android:alpha="0.8"
+                        android:maxHeight="150dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView >
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabConfirm"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:clickable="true"
+        android:padding="0dp"
+        android:layout_gravity="right"
+        android:cropToPadding="false"
+        android:src="@drawable/ic_check_white_24dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="75dp"
+        app:backgroundTint="@android:color/holo_green_light" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabDeny"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:clickable="true"
+        android:padding="0dp"
+        android:layout_gravity="left"
+        android:cropToPadding="false"
+        android:src="@drawable/ic_clear_white_24dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-56dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginBottom="20dp"
+        app:backgroundTint="@android:color/holo_red_light" />
+</com.dexafree.materialList.card.CardLayout>
