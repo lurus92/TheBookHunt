@@ -94,7 +94,7 @@ public class MainActivity extends BaseNavActivity {
         final Button readButton = (Button) findViewById(R.id.readButton);
 
         final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        /*if(username.equals("prof")) fab.setVisibility(View.GONE);
+        /*if(username.equals("dima")) fab.setVisibility(View.GONE);
         else readButton.setVisibility(View.GONE);*/
 
         //Check if we can create a totally different Toolbar, programmatically
@@ -112,7 +112,7 @@ public class MainActivity extends BaseNavActivity {
                 public void onClick(View v) {
                     //Starting of the "restituzione" process
                     bookTitle.setText("Place the book");
-                    bookAuthor.setText("Move to the .");
+                    bookAuthor.setText("");
                     readButton.setText("Leave Book");
                     readButton.setOnClickListener(new View.OnClickListener() {
                         @Override

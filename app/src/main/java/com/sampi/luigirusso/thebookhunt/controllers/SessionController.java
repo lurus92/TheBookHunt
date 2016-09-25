@@ -36,7 +36,7 @@ public class SessionController {
     public void startLogin(String username, String password){
         /* TODO: check password, database connection */
         currentUser = new User(0000,username);
-        if (username=="prof") currentUser.setExample();
+        if (username=="dima") currentUser.setExample();
         /* TODO: retrive important data from user */
         /* TODO: save result to file */
     }

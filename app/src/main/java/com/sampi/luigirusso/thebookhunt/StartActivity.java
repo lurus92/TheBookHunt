@@ -179,7 +179,7 @@ public class StartActivity extends FragmentActivity implements StartDefaultFragm
                         //now we only send the username inserted
                         //intent.putExtra("username", username);
                         sessionController.startLogin(username,"password");
-                        if(username.equals("prof")) sessionController.getCurrentUser().setExample();
+                        if(username.equals("dima")) sessionController.getCurrentUser().setExample();
                         intent.putExtra("user",sessionController.getCurrentUser().toString());  //TODO: CHECK HOW TO PASS AN OBJ
                         startActivity(intent);
                         finish();

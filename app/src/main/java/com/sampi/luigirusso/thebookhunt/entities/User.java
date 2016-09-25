@@ -21,7 +21,7 @@ public class User {
 
     public void setExample(){
         this.ID = 0;
-        this.username = "prof";
+        this.username = "dima";
         this.booksRead = 0;
         this.currentBook = new Book(10,0,"Pinocchio","Carlo Collodi","",1992, R.drawable.pinocchio,45.48348422,9.18843269);
     }

@@ -124,6 +124,21 @@ public class ShareActivity extends BaseNavActivity implements ISBNFragment.OnFra
                             }
                         })
                         .show();
+
+                /*
+                Log.i(this.getLocalClassName(), bookToShare.toString());
+                Intent intent = new Intent(getApplicationContext(), BookDetail2Activity.class);
+                Bundle extras = getIntent().getExtras();
+                if (extras != null) {
+                    String user = extras.getString("user");
+                    intent.putExtra("user",user);
+                }
+                intent.putExtra("bookToDisplay",bookToShare.toString());
+                startActivity(intent);
+                finish();
+*/
+
+
             }
         }
         //Nothing
@@ -279,7 +294,7 @@ public class ShareActivity extends BaseNavActivity implements ISBNFragment.OnFra
             Bundle args = new Bundle();
             args.putString("bookTitle", output.getTitle());
             args.putString("bookAuthor", output.getAuthor());
-            args.putString("bookDescription", output.getDescription());
+            args.putString("bookDescription", output.getDescription().replace(",",""));
             args.putLong("bookISBN", output.getISBN());
             args.putInt("bookYear", output.getYear());
             args.putString("bookThumbURL", output.getThumb().toString());

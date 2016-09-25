@@ -157,17 +157,16 @@ public class BookDetail2Activity extends BaseNavActivity implements
         Button markAsReadButton = (Button) findViewById(R.id.readButton);
         Bitmap bitmap = ((BitmapDrawable)bookImg.getDrawable()).getBitmap();
         Palette p = Palette.from(bitmap).generate();
-        toolbar.setBackgroundColor(p.getDarkVibrantColor(0));
-        bookTitleTV.setTextColor(p.getLightVibrantColor(0));
-        bookAuthorTV.setTextColor(p.getVibrantColor(0));
-        markAsReadButton.setBackgroundTintList(new ColorStateList(new int[][]{new int[]{0}}, new int[]{p.getVibrantColor(0)}));
+        toolbar.setBackgroundColor(p.getDarkVibrantColor(Color.WHITE));
+        bookTitleTV.setTextColor(p.getLightVibrantColor(Color.WHITE));
+        bookAuthorTV.setTextColor(p.getVibrantColor(Color.WHITE));
+        markAsReadButton.setBackgroundTintList(new ColorStateList(new int[][]{new int[]{0}}, new int[]{p.getVibrantColor(Color.WHITE)}));
         markAsReadButton.setVisibility(View.GONE);
         getWindow().setStatusBarColor(p.getVibrantColor(0));
         getWindow().setNavigationBarColor(p.getVibrantColor(0));
         //Fin qui ok
-        RelativeLayout container = (RelativeLayout) findViewById(R.id.detailContainerLayout);
-        container.setBackgroundColor(p.getDarkVibrantColor(0));
-        //container.setBackground(getDrawable(Integer.parseInt(bookCover)));
+        //RelativeLayout container = (RelativeLayout) findViewById(R.id.detailContainerLayout);
+        //container.setBackgroundColor(p.getDarkVibrantColor(0));
     }
 
     @Override
